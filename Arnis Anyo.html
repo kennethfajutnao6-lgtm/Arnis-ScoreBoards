@@ -19,6 +19,40 @@ body {
     color: #222;
 }
 
+/* ROTATION MESSAGE */
+.rotate-message {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #111;
+    color: white;
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.rotate-content {
+    max-width: 350px;
+}
+
+.rotate-icon {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.rotate-message h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.rotate-message p {
+    color: #ccc;
+    font-size: 15px;
+}
+
+/* MAIN CONTAINER */
 .container {
     max-width: 1400px;
     margin: auto;
@@ -233,10 +267,38 @@ button:hover {
         font-size: 12px;
     }
 }
+
+/* SHOW ROTATION MESSAGE ON PORTRAIT MOBILE */
+@media screen and (max-width: 900px) and (orientation: portrait) {
+
+    .rotate-message {
+        display: flex;
+    }
+
+    .container {
+        display: none;
+    }
+}
 </style>
 </head>
 
 <body>
+
+<!-- ROTATION MESSAGE -->
+<div class="rotate-message">
+    <div class="rotate-content">
+        <div class="rotate-icon">📱</div>
+
+        <h2>PLEASE ROTATE YOUR DEVICE</h2>
+
+        <p>
+            Turn your phone sideways to landscape mode
+            to use the Arnis Anyo Individual Scoreboard.
+        </p>
+
+        <div style="font-size:40px; margin-top:20px;">↻</div>
+    </div>
+</div>
 
 <div class="container">
 
